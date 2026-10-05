@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 
 root = Path(__file__).resolve().parent
 files = [
-    '.gitignore', 'index.html', 'app.css', 'app.mjs', 'model-worker.mjs', 'sw.js',
+    '.gitignore', '.nojekyll', 'index.html', 'app.css', 'app.mjs', 'model-worker.mjs', 'sw.js',
     'manifest.webmanifest', 'icons/leaf.svg', 'icons/maskable.svg', 'data/activities.json',
     'semantic.mjs', 'semantic.browser.mjs', 'package.json', 'pnpm-lock.yaml', 'server.mjs',
     'prepare-browser-assets.mjs', 'prepare-notices.mjs', 'model-preflight.mjs',
