@@ -1,0 +1,13 @@
+{
+  "name": "outside-first",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local sentence embeddings for curated outside observation activities.",
+  "scripts": {
+    "model:preflight": "node model-preflight.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1"
+  }
+}

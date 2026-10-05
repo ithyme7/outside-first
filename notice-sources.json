@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-10-05T19:11:09.155Z",
+  "files": [
+    {
+      "source": "node_modules/@huggingface/transformers/LICENSE",
+      "target": "licenses/transformers-Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "unmodified": true
+    },
+    {
+      "source": "node_modules/.pnpm/@huggingface+jinja@0.5.10/node_modules/@huggingface/jinja/LICENSE",
+      "target": "licenses/jinja-MIT.txt",
+      "bytes": 1069,
+      "sha256": "d6e7b19451c1b3d1d66353bb4b1274138953b3bfd9ae60c56e77b1f548796982",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/microsoft/onnxruntime/89f8206ba4f1c22c39e0297fb55272e8ce8cd7d0/LICENSE",
+      "target": "licenses/onnxruntime-MIT.txt",
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/microsoft/onnxruntime/89f8206ba4f1c22c39e0297fb55272e8ce8cd7d0/ThirdPartyNotices.txt",
+      "target": "licenses/onnxruntime-ThirdPartyNotices.txt",
+      "bytes": 326866,
+      "sha256": "e9e90971a8e75a9a8ac0c6412e29c1202d079998389915aa485f46c816c3b4cc",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.4/LICENSE",
+      "target": "licenses/emscripten-LICENSE.txt",
+      "bytes": 5093,
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.4/AUTHORS",
+      "target": "licenses/emscripten-AUTHORS.txt",
+      "bytes": 28933,
+      "sha256": "56f7df65203d4858dac19cafe3a84a8c49abaff56b67d32d2d463d5fef6e440b",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.4/system/lib/libc/musl/COPYRIGHT",
+      "target": "licenses/musl-COPYRIGHT.txt",
+      "bytes": 6204,
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.4/system/lib/libcxx/LICENSE.TXT",
+      "target": "licenses/libcxx-LICENSE.txt",
+      "bytes": 16703,
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.4/system/lib/libcxxabi/LICENSE.TXT",
+      "target": "licenses/libcxxabi-LICENSE.txt",
+      "bytes": 16706,
+      "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/emscripten-core/emscripten/4.0.4/system/lib/compiler-rt/LICENSE.TXT",
+      "target": "licenses/compiler-rt-LICENSE.txt",
+      "bytes": 16708,
+      "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d",
+      "unmodified": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/webpack/webpack/v5.97.1/LICENSE",
+      "target": "licenses/webpack-MIT.txt",
+      "bytes": 1071,
+      "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e",
+      "unmodified": true
+    }
+  ],
+  "scope": "Original notices preserved for the shipped browser bundle and prebuilt WASM; broader upstream notice list does not establish all components are linked. Emscripten and Webpack versions are source CI/lock inferences.",
+  "eigenSource": "https://gitlab.com/libeigen/eigen/-/archive/1d8b82b0740839c0de7f1242a3585e3390ff5f33/eigen-1d8b82b0740839c0de7f1242a3585e3390ff5f33.zip",
+  "eigenLicense": "MPL-2.0; full license text retained in ONNX upstream ThirdPartyNotices.txt."
+}

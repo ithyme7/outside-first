@@ -1,0 +1,60 @@
+Outside First: local model and runtime notice
+
+This notice identifies the unmodified model assets and browser runtime. Their
+licenses remain separate from the original app's license.
+
+The activity cards in model-preflight.mjs are authored fixtures. The model computes
+sentence embeddings and cosine scores to rank supplied cards. It does not write
+activities, perform cloud inference, obtain GPS, or use a user API key.
+
+MODEL
+Publisher/source: Xenova/all-MiniLM-L6-v2
+Model card: https://huggingface.co/Xenova/all-MiniLM-L6-v2
+Upstream model named by the model card:
+https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+Pinned source revision: 751bff37182d3f1213fa05d7196b954e230abad9
+License identified by the source model card: Apache-2.0.
+The model is not CC0 or public domain. The model weights were not modified here.
+Only the source's q8 ONNX export (model_quantized.onnx) is used.
+
+Weight bytes: 22,972,370
+Weight SHA-256:
+afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1
+The hash matches the published Hugging Face LFS SHA-256 at the pinned revision.
+The seven downloaded source files total 23,918,447 bytes. The source model card,
+config, tokenizer assets and vocabulary are preserved beside the weight file.
+Full file paths, source URLs, bytes and hashes are in model-provenance.json.
+
+The Xenova repository at this revision includes an Apache-2.0 license tag but no
+standalone LICENSE or NOTICE file. The official, unmodified Apache-2.0 license
+text is preserved at models/LICENSE-Apache-2.0.txt, downloaded from:
+https://www.apache.org/licenses/LICENSE-2.0.txt
+Preserve this notice, the source model card, source attribution, and license text
+when redistributing the model assets. This notice does not change any license.
+
+LIBRARY AND RUNTIME
+Hugging Face Transformers.js: @huggingface/transformers exactly 3.8.1.
+Package source: https://registry.npmjs.org/@huggingface/transformers/3.8.1
+Package license: Apache-2.0. The original package LICENSE is preserved in
+licenses/transformers-Apache-2.0.txt.
+Pipeline documentation:
+https://huggingface.co/docs/transformers.js/v3.8.1/api/pipelines
+Dependency licenses retain their own terms; the package's license does not
+relicense its ONNX Runtime or other dependencies. Preserve the applicable
+dependency notices and licenses when distributing the browser runtime.
+
+The local Node preflight used the package's native CPU ONNX backend. For browser
+integration, the package contains a fully bundled ESM build at dist/transformers.js
+and its local ort-wasm-simd-threaded.jsep.mjs/.wasm runtime pair. Serve these assets
+locally and pass the local runtime directory as wasmPaths. The smaller-named
+transformers.web.js build has bare ONNX package imports and needs a bundler or
+additional import mappings. No browser execution is claimed by the Node receipt.
+
+REPRODUCTION AND PROOF LIMIT
+Initial preparation: node model-preflight.mjs --download
+Local rerun with existing verified assets: node model-preflight.mjs
+Each run validates the real 384-dimensional mean-pooled normalized embeddings,
+three paraphrase rankings, and a second model reload in a fresh process with
+remote model access disabled. The fresh process also blocks JavaScript fetch.
+This proves local asset inference under those settings; it does not simulate an
+operating-system network disconnect. No mocked AI fallback is implemented.

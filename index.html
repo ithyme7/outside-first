@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244f3f">
+  <meta name="description" content="Find one small thing to notice outside. A local open model, a pocket card, and a field note that stays with you.">
+  <title>Outside First — one small thing to notice</title>
+  <link rel="icon" href="./icons/leaf.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./app.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#planner">Skip to your outside moment</a>
+  <div class="page-wrap">
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Outside First home"><img src="./icons/leaf.svg" width="36" height="36" alt=""><span>outside<span class="wordmark-light"> first</span><span class="wordmark-dot">.</span></span></a>
+      <nav aria-label="Main navigation"><span class="local-label"><span class="tiny-dot"></span>Local by design</span><button class="text-button notes-link" id="open-notes" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4M3 7h4M3 11h4M3 15h4"/></svg>My field notes<span id="note-count" class="note-count" hidden>0</span></button></nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy"><p class="eyebrow"><span class="small-line"></span>A small way back outside</p><h1 id="hero-title">A little attention.<br>A little <em>outside.</em></h1><p class="hero-description">You don’t need a destination. Just a few minutes<br class="desktop-break"> and something ordinary worth noticing.</p></div>
+        <div class="hero-margin" aria-hidden="true"><svg class="margin-leaf" viewBox="0 0 100 120"><path d="M25 108C26 74 40 37 71 11M36 78C16 79 7 60 12 49c18 1 28 9 24 29ZM47 59C41 36 50 16 74 9c6 22-8 46-27 50ZM35 79C47 61 72 57 88 66c-7 22-30 30-53 13Z"/></svg><span>A change of pace,<br>close to home.</span></div>
+      </section>
+
+      <section class="workspace" id="planner" aria-label="Plan your outside moment">
+        <div class="planner-panel">
+          <div class="section-heading"><span class="section-number">01</span><h2>Make a little room</h2></div>
+          <section class="model-panel" aria-labelledby="model-title">
+            <div class="model-heading"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6zM8.5 12l2.2 2.2 4.8-5"/></svg><h3 id="model-title">A guide that stays with you</h3><span class="status-dot" id="model-dot" aria-hidden="true"></span></div>
+            <p id="model-status" role="status">Prepare the open model from this app’s server. Your words are compared on this device.</p>
+            <progress id="model-progress" max="100" hidden aria-label="Local model preparation"></progress>
+            <div class="model-actions"><button class="small-button" id="prepare-model" type="button">Prepare local guide</button><button class="text-button" id="manual-mode" type="button">Choose a card myself</button></div>
+            <div class="offline-row" id="offline-row"><span id="offline-status">Offline use is not prepared yet.</span><button class="text-button" id="prepare-offline" type="button" disabled>Keep for offline use</button></div>
+          </section>
+
+          <form id="moment-form">
+            <label class="input-label" for="preference">What would you like to notice?</label>
+            <div class="textarea-wrap"><textarea id="preference" name="preference" maxlength="500" rows="3" placeholder="Something quiet, maybe leaves moving in the wind…" aria-describedby="preference-help char-count"></textarea><span id="char-count" class="char-count">0 / 500</span></div>
+            <p id="preference-help" class="input-hint">A feeling, a small curiosity, or something you enjoy.</p>
+            <div class="idea-chips" aria-label="Ideas for your preference"><button type="button" data-idea="A quiet moment listening to birds">A little quiet</button><button type="button" data-idea="Something creative with colours and shapes">Something creative</button><button type="button" data-idea="Small details in the trees and leaves">Leaves & little details</button></div>
+            <fieldset class="time-fieldset"><legend>I have…</legend><div class="time-options"><label><input type="radio" name="minutes" value="5" checked><span>5 <small>minutes</small></span></label><label><input type="radio" name="minutes" value="10"><span>10 <small>minutes</small></span></label><label><input type="radio" name="minutes" value="15"><span>15 <small>minutes</small></span></label></div></fieldset>
+            <label class="stay-control"><input id="stationary" type="checkbox"><span class="checkbox-art" aria-hidden="true"></span><span>Stay in one place<small>A seat, a balcony, a familiar outside spot.</small></span></label>
+            <button class="primary-button find-button" id="find-moment" type="submit" disabled><span id="find-label">Find my outside moment</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+            <p class="form-status" id="form-status" role="status">Prepare the local guide, or choose a card yourself.</p>
+          </form>
+
+        </div>
+
+        <aside class="invitation-panel" id="invitation-panel" aria-labelledby="invitation-title">
+          <div class="paper-corner" aria-hidden="true"></div><div class="invitation-top"><span class="eyebrow">A field guide to the ordinary</span><span class="compass-mark" aria-hidden="true">N<br>✳</span></div>
+          <svg class="outside-sketch" viewBox="0 0 430 280" fill="none" aria-hidden="true">
+            <defs><clipPath id="scene-clip"><path d="M55 236V160a160 160 0 0 1 320 0v76Z"/></clipPath></defs>
+            <path class="sketch-arch" d="M55 236V160a160 160 0 0 1 320 0v76Z"/>
+            <g clip-path="url(#scene-clip)"><circle class="sketch-sun" cx="284" cy="94" r="29"/><path class="sketch-far" d="M39 209c61-10 101-49 156-35 68 19 102-22 190-8v81H39Z"/><path class="sketch-near" d="M28 230c53-25 119-28 171-8 43 16 116-18 196-4v37H28Z"/><path class="sketch-path" d="M177 258c-5-23 22-36 29-50 4-8-2-16-10-18"/><path class="sketch-stem" d="M126 233V104m0 77-24-25m24-1 26-27m-26 72 29-25"/><path class="sketch-tree" d="M88 124c-14-12-10-36 7-45-5-21 15-42 33-34 17-12 39 4 37 23 22 9 23 36 9 47 4 18-16 34-31 28-15 14-47 9-55-19Z"/><path class="sketch-grass" d="m310 234-6-22m6 22 7-18m-29 13-4-13m4 13 7-9m-102 12-3-13m3 13 6-10"/></g>
+            <path class="sketch-bird" d="M202 92q9-10 18 0 9-10 18 0M245 121q6-7 12 0 6-7 12 0"/>
+            <path class="sketch-ground" d="M42 240h346M59 248h54m214 0h44"/>
+          </svg>
+          <h2 id="invitation-title">The good stuff is<br>already out there.</h2><p>A moving leaf. An unfamiliar sound.<br>The shape of a cloud you almost missed.</p>
+          <div class="invitation-footer"><span>Pick a small moment.<br>Then put the phone away.</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 14c4 18 22 21 29 5M25 18l13 1-3 13"/></svg></div>
+        </aside>
+      </section>
+
+      <section class="manual-browser" id="manual-browser" hidden aria-labelledby="manual-title"><div class="section-heading"><span class="section-number">02</span><h2 id="manual-title">Choose what catches your eye</h2></div><p class="section-description" id="manual-description">Manual cards that fit your time and place. The model is not choosing these.</p><div id="manual-cards" class="manual-cards"></div></section>
+
+      <section class="mission-section" id="mission-section" hidden aria-labelledby="mission-title">
+        <div class="section-heading"><span class="section-number">02</span><h2>Your small outside moment</h2><span class="match-badge" id="match-badge">Chosen by you</span></div>
+        <article class="mission-card"><div class="mission-main"><p class="eyebrow" id="mission-meta"></p><h3 id="mission-title" tabindex="-1"></h3><p id="mission-summary" class="mission-summary"></p><ol id="mission-steps" class="mission-steps"></ol><button type="button" id="open-pocket" class="primary-button">Take this outside<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v18H7zM10 17h4"/></svg></button><p class="pocket-hint">One pocket card. No need to keep the screen on.</p></div><div class="mission-margin"><span class="eyebrow">Why this moment</span><p id="match-reason"></p><div class="mission-tags" id="mission-tags"></div><div id="alternative-wrap" class="alternative-wrap" hidden><span class="eyebrow">Or, a different little thing</span><button id="choose-alternative" class="alternative-button" type="button"><span id="alternative-title"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button><p id="alternative-meta"></p></div></div></article>
+        <form id="field-note-form" class="field-note-form"><div><span class="eyebrow">When you come back</span><label for="field-note" id="field-note-label">What stayed with you?</label><p>One line is plenty. It stays in this browser.</p></div><div class="note-input-group"><input id="field-note" name="field-note" type="text" maxlength="280" autocomplete="off" placeholder="A small detail to remember…" required><button type="submit" class="small-button">Save field note<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg></button><p id="note-status" class="form-status" role="status"></p></div></form>
+      </section>
+
+      <section class="how-it-works" aria-label="A small ritual"><div><span>01</span><p>Make a little room.<small>Five minutes is a good beginning.</small></p></div><div><span>02</span><p>Take your attention outside.<small>A familiar place is enough.</small></p></div><div><span>03</span><p>Bring back one small thing.<small>A memory, in your own words.</small></p></div></section>
+    </main>
+    <footer class="site-footer"><p>Less scrolling. More noticing.</p><button class="text-button" id="open-about" type="button">About & local privacy<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/></svg></button></footer>
+  </div>
+
+  <dialog id="pocket-dialog" class="pocket-dialog" aria-labelledby="pocket-title"><div class="pocket-top"><span class="eyebrow">Outside First · Pocket card</span><button type="button" id="close-pocket" class="icon-button" aria-label="Close pocket card">×</button></div><p class="pocket-meta" id="pocket-meta"></p><h2 id="pocket-title"></h2><ol id="pocket-steps" class="mission-steps"></ol><div class="phone-away"><img src="./icons/leaf.svg" alt="" width="32" height="32"><p>You have everything you need.<strong>Put the phone away. Look around.</strong></p></div><div class="timer-row"><button type="button" id="start-timer" class="text-button">Start optional elapsed timer</button><span id="timer-display" hidden aria-label="Elapsed time">00:00</span></div><p class="timer-help">No alarm. Come back whenever you like.</p><button type="button" id="return-from-outside" class="primary-button">I’m back — keep a field note<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></dialog>
+
+  <dialog id="notes-dialog" class="notes-dialog" aria-labelledby="notes-title"><div class="dialog-top"><div><p class="eyebrow">Little things, kept close</p><h2 id="notes-title">My field notes</h2></div><button type="button" id="close-notes" class="icon-button" aria-label="Close field notes">×</button></div><p class="dialog-description">Your own words, saved only in this browser. Deleting a note removes it from this device.</p><div id="notes-list" class="notes-list"></div><p id="notes-storage-status" role="status" class="form-status"></p><button type="button" id="notes-done" class="small-button">Back to the outside</button></dialog>
+
+  <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title"><div class="dialog-top"><div><p class="eyebrow">Small on purpose</p><h2 id="about-title">A little guide.<br>A local model.</h2></div><button type="button" id="close-about" class="icon-button" aria-label="Close about">×</button></div><p>Outside First helps you choose one ordinary thing to notice in a familiar outdoor place. Its 20 activity cards are written in advance; the model ranks them from your words.</p><p>Preparation loads an open sentence encoder from this app’s server. Inference runs here, in a browser worker. Your preference text, notes, and choices are not sent to a remote inference service.</p><p>Field notes and preferences use this app’s own local browser storage. Clearing this site’s storage removes them. There is no account, location request, tracking, or notification.</p><details><summary>Model & offline details</summary><p><strong>Model:</strong> Xenova/all-MiniLM-L6-v2, Apache-2.0.<br><strong>Pinned revision:</strong> <code>751bff37182d3f1213fa05d7196b954e230abad9</code>.<br><strong>Runtime:</strong> Transformers.js with local ONNX WebAssembly.</p><p>The model compares sentence embeddings; it does not write or invent a mission. Time and staying in one place determine which cards are eligible.</p><p>“Keep for offline use” caches an explicit list of this app’s files, model, and runtime on this device. The app reports whether that cache preparation succeeds. Browser storage can be cleared or evicted; keep your app server available until preparation succeeds.</p><p><a href="./CREDITS.md" target="_blank" rel="noopener">Read model and runtime credits</a></p><p id="about-readiness">The local guide has not been prepared in this session.</p></details><button type="button" id="about-done" class="small-button">Let’s notice something</button></dialog>
+  <noscript><div class="noscript-message">Outside First needs JavaScript to load the local model and save field notes. You can still step outside and notice one sound, one shape, and one movement.</div></noscript>
+</body>
+</html>

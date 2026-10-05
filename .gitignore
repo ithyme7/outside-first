@@ -1,0 +1,11 @@
+node_modules/
+cache/
+screenshots/
+*receipt.json
+distribution-audit.json
+frontend-receipt.json
+PROJECT-SCOPE.txt
+entry-review/
+*.zip
+release-manifest.json
+refine-interface.mjs
